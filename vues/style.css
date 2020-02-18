@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    background-color: #E3E2DD;
+    font-size: 20px;
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    height: 120px;
+    background-color: #212121;
+    color: ghostwhite;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid gray;
+;
+}
+
+#bar{
+    height: 60px;
+    width: 2px;
+    background-color: ghostwhite;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.text > a{
+    text-decoration: none;
+    color: #136CB2;
+}
+
+label, select, input{
+    width: 150px;
+    display: inline-block;
+    margin: 5px 0;
+}
