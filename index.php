@@ -22,7 +22,8 @@
         else :
             /*Interact with the database for get the names of the form ID*/
             $conn->select_db($dbname);
-            $sql = "SELECT * FROM `articles` LEFT JOIN `users` ON (articles.user = users.ID_user) WHERE 1";
+            $sql = "SELECT * FROM `articles` LEFT JOIN `users` ON (articles.user = users.ID_user) LEFT JOIN 
+                    `commentaires` ON (articles.ID_article = commentaires.article_ID) WHERE 1";
             //echo $sql;
             $result = $conn->query($sql);
             // echo $conn->error;
@@ -31,7 +32,9 @@
             while ($row = $result->fetch_assoc()):
                 echo utf8_encode("<h3>".$row['nom']." par ".$row['name']."<br><img src=".$row["image"]." width='256' height='256' alt='image'><br><br>".
                     $row['text'].'<br>');
+                echo utf8_encode('<h3>'.$row['comments']);
             endwhile;
+
         endif;
 
     else:
