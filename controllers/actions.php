@@ -39,6 +39,10 @@ switch ($_GET['method']):
         signinChecks();
         break;
 
+    case 'logout':
+        logout();
+        break;
+
     default:
         echo 'Le paramètre est lié à aucun mode connu';
         break;
@@ -194,12 +198,16 @@ function signinChecks(){
 
     endif;
 }
+
+function logout(){
+    session_unset();
+    session_destroy();
+    ?>
+
+    <h2>Vous venez de vous déconnecter, vous allez être redirigé vers l'accueil</h2>
+    <?php header("Refresh:2 url=../index.php"); ?> <?php
+}
 ?>
-
-
-
-
-
 
 </body>
 </html>
