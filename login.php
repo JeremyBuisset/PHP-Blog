@@ -8,15 +8,15 @@
 
 </head>
 <body>
-<?php include "vues/header.php" ?>
-<h2>Se connecter</h2>
-<form action="log_checks.php" method="post">
-    <label for="login">Votre nom :</label>
-    <input type="text" id="login" name="login">
-    <br />
-    <label for="pass">Votre mot de passe : </label>
-    <input id="pass" type="password" name="pwd"><br />
-    <input type="submit" value="Connexion">
-</form>
+    <?php include "vues/header.php" ?>
+    <h2>Se connecter</h2>
+    <form action="controllers/actions.php?method=loginChecks" method="post">
+        <label for="login">Votre nom :</label>
+        <input type="text" id="login" name="login">
+        <br />
+        <label for="pass">Votre mot de passe : </label>
+        <input id="pass" type="password" name="pwd"><br />
+        <input type="submit" value="Connexion">
+    </form>
 </body>
 </html>

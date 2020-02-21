@@ -5,6 +5,9 @@ body{
     background-color: #E3E2DD;
     font-size: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header{
@@ -16,7 +19,6 @@ header{
     justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid gray;
-;
 }
 
 #bar{
@@ -35,8 +37,23 @@ a {
     color: #136CB2;
 }
 
-label, select, input{
-    width: 150px;
-    display: inline-block;
-    margin: 5px 0;
+.test{
+    display: flex;
+    flex-direction: column;
 }
+
+.forms{
+    margin-bottom: 20px;
+    padding-top: 0;
+}
+
+h4{
+    margin-top: 0;
+}
+
+h3{
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+

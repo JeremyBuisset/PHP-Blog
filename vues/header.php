@@ -26,11 +26,6 @@
 
     endif;
     ?>
-
-
-
-
-
 </header>
 
 </body>

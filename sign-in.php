@@ -11,7 +11,7 @@
 <?php include "vues/header.php" ?>
 
 <h2>Formulaire d'inscription</h2>
-<form action="signin-checks.php" method="post">
+<form action="controllers/actions.php?method=signinChecks" method="post">
     <label for="login">Votre nom :</label>
     <input type="text" id="login" name="login">
     <br />
