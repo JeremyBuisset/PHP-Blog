@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
 
 </head>
 <body>
 <header>
-    <div>Blog PHP</div>
+    <div><a href="index.php">Blog PHP</a></div>
     <div id="bar"></div>
 
     <?php

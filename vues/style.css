@@ -1,8 +1,7 @@
 body{
     margin: 0;
     font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    background-color: #E3E2DD;
+    background-color: #CFE2E8;
     font-size: 20px;
     text-align: center;
     display: flex;
@@ -12,13 +11,14 @@ body{
 
 header{
     width: 100%;
-    height: 120px;
-    background-color: #212121;
+    height: 90px;
+    font-weight: bold;
+    background-color: #40826D;
     color: ghostwhite;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid #2A708F;
 }
 
 #bar{
@@ -56,4 +56,50 @@ h3{
     text-decoration: underline;
 }
 
+.notifs{
+    background-color: #40826D;
+    width : 70%;
+    margin: 20px;
+    color : ghostwhite;
+    border: 2px solid #3F7C8F;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+}
 
+.articles{
+    background-color: ghostwhite;
+    width : 70%;
+    margin-bottom: 20px;
+    color : #212121;
+    border: 2px solid #3F7C8F;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+}
+
+img{
+    width: 256px;
+    height: 256px;
+}
+
+.comments{
+    color : #212121;
+    border-top: 2px solid #3F7C8F;
+    border-bottom: 2px solid #3F7C8F;
+    width: 70%;
+    margin : 20px auto;
+}
+
+.artTitle{
+    font-weight: bold;
+    font-size: 30px;
+    font-style: italic;
+
+}
+
+
+@media (max-width: 512px) {
+    img{
+        width: 128px;
+        height: 128px;
+    }
+}

@@ -84,10 +84,10 @@ function update (){
         $image = utf8_decode($_POST['image']);
         $text =  utf8_decode($_POST['text']);
         $id =  $_POST['id'];
-
-        $sql = utf8_decode('UPDATE `articles` SET nom=$name image=$image text=$text WHERE ID_article = $id');
+        $sql  = "UPDATE 'articles' SET nom=$name, image=$image, text=$text WHERE ID_article=$id ";
 
         $result = $conn->query($sql);
+
         echo "L'article a bien été mis à jour'";
         header("Refresh:2 url=../index.php");
 
