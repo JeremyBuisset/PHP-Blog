@@ -15,8 +15,10 @@ require 'vues/header.php';
 switch ($_GET['action']):
     case "signin":
     ?>
-        <h2>Formulaire d'inscription</h2>
-        <form action="controllers/actions.php?method=signinChecks" method="post">
+        <div class="notifs">
+            <p>Formulaire d'inscription</p>
+        </div>
+        <form class='test' action="controllers/actions.php?method=signinChecks" method="post">
             <label for="login">Votre nom :</label>
             <input type="text" id="login" name="login">
             <br />
@@ -27,17 +29,20 @@ switch ($_GET['action']):
 
         break;
 
-    case 'login':
-    ?>
-    <h2>Se connecter</h2>
-    <form action="controllers/actions.php?method=loginChecks" method="post">
-        <label for="login">Votre nom :</label>
-        <input type="text" id="login" name="login">
-        <br />
-        <label for="pass">Votre mot de passe : </label>
-        <input id="pass" type="password" name="pwd"><br />
-        <input type="submit" value="Connexion">
-    </form> <?php
+    case 'login': ?>
+
+        <div class="notifs">
+            <p>Connexion</p>
+        </div>
+
+        <form class='test' action="controllers/actions.php?method=loginChecks" method="post">
+            <label for="login">Votre nom :</label>
+            <input type="text" id="login" name="login">
+            <br />
+            <label for="pass">Votre mot de passe : </label>
+            <input id="pass" type="password" name="pwd"><br />
+            <input type="submit" value="Connexion">
+        </form> <?php
         break;
 
     default:

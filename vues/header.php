@@ -18,14 +18,22 @@
     session_start();
     if (isset($_SESSION['name'])):
         //Choses si variables sessions existent
-        echo '<a href="admin.php">ESPACE PERSONNEL</a>';
-        echo '<a href="controllers/actions.php?method=logout">DÉCONNEXION</a>';
+        if ($_SESSION['admin'] === true):
+            echo '<a href="admin.php">ESPACE ADMINISTRATEUR</a>';
+            echo '<a href="controllers/actions.php?method=logout">DÉCONNEXION</a>';
+        else:
+            echo '<a href="admin.php">ESPACE PERSONNEL</a>';
+            echo '<a href="controllers/actions.php?method=logout">DÉCONNEXION</a>';
+
+        endif;
+
     else:
         //Choses si variables sessions n'existent pas
         echo '<a href="log&signIn.php?action=login">CONNEXION</a>';
         echo '<a href="log&signIn.php?action=signin">INSCRIPTION</a>';
 
     endif;
+
     ?>
 </header>
 

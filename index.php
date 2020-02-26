@@ -17,7 +17,7 @@
     if (isset($_SESSION['name'])):
         ?>
         <div class="notifs">
-            <p>Bienvenue <?=$_SESSION['name'] ?></p>
+            <p>Bienvenue <?=$_SESSION['name'] ?> (<?=$_SESSION['id'] ?>)</p>
             <p>Vous pouvez créer vos articles dans votre espace personnel</p>
         </div>
 
@@ -45,7 +45,12 @@
                     <p><?=utf8_encode($row['nom']) ?> par <?=utf8_encode($row['name']) ?></p>
                 </div>
                 <div class="artImages">
-                    <img src="<?=$row['image'] ?>" alt='image'">
+                    <?php if ($row['image'] == null):
+                        ?> <p></p> <?php
+                        else: ?>
+                            <img src="<?=$row['image'] ?>" alt='image'"> <?php
+                       endif; ?>
+
                 </div>
                 <div class="artText">
                     <p><?=utf8_encode($row['text']) ?> </p>
